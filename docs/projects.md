@@ -140,7 +140,7 @@ StatuteDetails(
 
 ## `lawData`
 
-Host content built with [citation-utils](https://github.com/justmars/citation-utils) and [statute-trees](https://github.com/justmars/statute-trees) as an [sqlite](https://sqlite.org) database queryable via [Datasette](https:/datasette.io).
+Host content built with [citation-utils](https://github.com/justmars/citation-utils) and [statute-trees](https://github.com/justmars/statute-trees) as an [sqlite](https://sqlite.org) database queryable via [Datasette](https://datasette.io).
 
 ![Screenshot of LawData homepage](img/screenshot-lawdata.png "Screenshot of Lawdata homepage")
 
@@ -148,7 +148,7 @@ Host content built with [citation-utils](https://github.com/justmars/citation-ut
 
 ## `lawSQL`
 
-With the database built with [lawData](https://github.com/justmars/lawdata), [lawSQL](https://lawsql.com) is a [Django](https://djangoproject.com) site styled with [TailwindCSS](https://tailwindcss.com).
+Using [lawData](https://github.com/justmars/lawdata) as a foundational data source, [lawSQL](https://lawsql.com) is a [Django](https://djangoproject.com) site styled with [TailwindCSS](https://tailwindcss.com).
 
 ![Screenshot of LawSQL homepage](img/screenshot-lawsql.png "Screenshot of LawSQL homepage")
 
