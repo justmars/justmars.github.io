@@ -1,8 +1,8 @@
 site_name: justmars
-site_description: Law, dev work
-site_url: https://lawsql.com
+site_description: Notes on law and dev work
+site_url: https://justmars.github.io
 site_author: Marcelino Veloso III
-repo_url: https://github.com/justmars/justmars
+repo_url: https://github.com/justmars/justmars.github.io
 theme:
   name: "material"
   palette:

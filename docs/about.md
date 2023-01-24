@@ -7,6 +7,20 @@ Degree  | Institution
 `Computer Science` | University of the Philippines
 `Law` | University of the Philippines
 
+## Stack
+
+Aspect | Choice by preference
+--:|:--
+Base | Python, SQL, JS
+Web | Django, FastAPI
+CSS | TailwindCSS, Bootstrap
+JS | htmx, hyperscript
+Database | sqlite, postgresql
+Data | Datasette, Pydantic, sqlite-utils
+Templating | DTL, Jinja
+CLI | flyctl
+Docs | mkdocs, mkdocstrings, mkdocs-material
+
 ## Tech-Related Work
 
 Work  | Organization | Description
