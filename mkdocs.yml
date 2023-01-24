@@ -22,7 +22,7 @@ nav:
   - index.md
   - projects.md
   - about.md
-  
+
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -41,6 +41,7 @@ plugins:
   - search:
       lang: en
 markdown_extensions:
+  - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
       auto_title: true

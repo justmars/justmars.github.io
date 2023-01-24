@@ -17,9 +17,9 @@ CSS | TailwindCSS, Bootstrap
 JS | htmx, hyperscript
 Database | sqlite, postgresql
 Data | Datasette, Pydantic, sqlite-utils
-Templating | DTL, Jinja
-CLI | flyctl
+Templating | DTL, Jinj
 Docs | mkdocs, mkdocstrings, mkdocs-material
+DevOps CLI | flyctl, litestream
 
 ## Tech-Related Work
 
