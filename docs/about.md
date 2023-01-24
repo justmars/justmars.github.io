@@ -1,3 +1,7 @@
+---
+hide:
+- navigation
+---
 # About
 
 ## Stack
@@ -25,9 +29,9 @@ Work  | Organization | Description
 
 Topic  | Title
 --:|:--
-`Remote Notarization` | _Notarization in the New Normal: White Paper on Remote Online Notarization in the Philippines_
-`Telco Competition` | _Telconopoly: Overthrowing the Shadow of Regulatory Capture and Opportunism in Philippine  Telecommunications through Effective Competition Policy_
-`Virtual Propery` | _Virtual Property: A Modified Usufruct of Intangibles_
+Remote Notarization | _Notarization in the New Normal: White Paper on Remote Online Notarization in the Philippines_
+Telco Competition | _Telconopoly: Overthrowing the Shadow of Regulatory Capture and Opportunism in Philippine  Telecommunications through Effective Competition Policy_
+Virtual Propery | _Virtual Property: A Modified Usufruct of Intangibles_
 
 ## Academic Background
 

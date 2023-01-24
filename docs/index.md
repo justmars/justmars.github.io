@@ -1,3 +1,7 @@
+---
+hide:
+- navigation
+---
 # Home
 
 Hi, I'm Mars and this is an attempt at a blog.

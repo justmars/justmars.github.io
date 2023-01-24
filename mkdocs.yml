@@ -5,6 +5,10 @@ site_author: Marcelino Veloso III
 repo_url: https://github.com/justmars/justmars.github.io
 theme:
   name: "material"
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
