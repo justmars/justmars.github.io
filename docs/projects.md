@@ -140,7 +140,7 @@ StatuteDetails(
 
 ## `lawData`
 
-Host content built with [citation-utils](https://github.com/justmars/citation-utils) and [statute-trees](https://github.com/justmars/statute-trees) as an [sqlite](https://sqlite.org) database queryable via [Datasette](https://datasette.io).
+_citation-utils_ and _statute-trees_ are principal ingredients of [corpus-x](https://github.com/justmars/corpus-x). The latter creates an [sqlite](https://sqlite.org) database, based on Philippine legal content, making it susceptible of being queried via _lawData_, a [Datasette](https://datasette.io) instance:
 
 ![Screenshot of LawData homepage](img/screenshot-lawdata.png "Screenshot of Lawdata homepage")
 
@@ -148,7 +148,7 @@ Host content built with [citation-utils](https://github.com/justmars/citation-ut
 
 ## `lawSQL`
 
-Using [lawData](https://github.com/justmars/lawdata) as a foundational data source, [lawSQL](https://lawsql.com) is a [Django](https://djangoproject.com) site styled with [TailwindCSS](https://tailwindcss.com).
+Hosting _lawData_ content via third-party API calls, _lawSQL_ is the public-facing site made with [Django](https://djangoproject.com) and styled with [TailwindCSS](https://tailwindcss.com).
 
 ![Screenshot of LawSQL homepage](img/screenshot-lawsql.png "Screenshot of LawSQL homepage")
 
