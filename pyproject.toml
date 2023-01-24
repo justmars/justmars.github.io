@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "justmars"
+version = "0.0.1"
+description = "Marcelino Veloso - website."
+authors = ["Marcelino G. Veloso III <mars@veloso.one>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://justmars.github.io"
+repository = "https://github.com/justmars/justmars"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^0.21"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.21"
+mkdocs = "^1.4.2"
+mkdocstrings = { extras = ["python"], version = "^0.20.0" }
+mkdocs-material = "^9.0.6"
+
+[tool.black]
+target-version = ['py311']
+line-length = 79
+include = '.pyi?$'
+exclude = '''
+/(
+    .git
+    | .hg
+    | .mypy_cache
+    | .tox
+    | .venv
+    | _build
+    | buck-out
+    | build
+    | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 79
+include_trailing_comma = 'True'
+
+[build-system]
+requires = ["poetry-core>=1.3.2"]
+build-backend = "poetry.core.masonry.api"
