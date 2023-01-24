@@ -1,23 +1,16 @@
 # About
 
-## Academic Background
-
-Degree  | Institution
---:|:--
-`Computer Science` | University of the Philippines
-`Law` | University of the Philippines
-
 ## Stack
 
-Aspect | Choice by preference
+Aspect | Choice, ordered by preference
 --:|:--
 Base | Python, SQL, JS
 Web | Django, FastAPI
 CSS | TailwindCSS, Bootstrap
 JS | htmx, hyperscript
 Database | sqlite, postgresql
-Data | Datasette, Pydantic, sqlite-utils
-Templating | DTL, Jinj
+Data | Datasette, pydantic, sqlite-utils
+Templating | DTL, Jinja
 Docs | mkdocs, mkdocstrings, mkdocs-material
 DevOps CLI | flyctl, litestream
 
@@ -35,3 +28,10 @@ Topic  | Title
 `Remote Notarization` | _Notarization in the New Normal: White Paper on Remote Online Notarization in the Philippines_
 `Telco Competition` | _Telconopoly: Overthrowing the Shadow of Regulatory Capture and Opportunism in Philippine  Telecommunications through Effective Competition Policy_
 `Virtual Propery` | _Virtual Property: A Modified Usufruct of Intangibles_
+
+## Academic Background
+
+Degree  | Institution
+--:|:--
+`Computer Science` | University of the Philippines
+`Law` | University of the Philippines

@@ -144,7 +144,7 @@ Host content built with [citation-utils](https://github.com/justmars/citation-ut
 
 ## `lawSQL`
 
-Using the database built with [lawdata](https://github.com/justmars/lawdata), generate a [Django](https://djangoproject.com) site styled with [TailwindCSS](https://tailwindcss.com).
+With the database built with [lawData](https://github.com/justmars/lawdata), [lawSQL](https://lawsql.com) is a [Django](https://djangoproject.com) site styled with [TailwindCSS](https://tailwindcss.com).
 
 ![Screenshot of LawSQL homepage](img/screenshot-lawsql.png "Screenshot of LawSQL homepage")
 
