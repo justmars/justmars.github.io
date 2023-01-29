@@ -617,7 +617,7 @@ The models are the schema for content outputted from <a href="https://justmars.g
 <p><a class="md-button" href="https://justmars.github.io/sqlpyd">Documentation</a></p>
 <h2 id="corpus-x"><code>corpus-x</code></h2>
 <p><a href="https://github.com/justmars/corpus-x">corpus-x</a>, made with <em>sqlpyd</em> models, generates a <a href="https://sqlite.org">sqlite</a> database of Philippine legal content:</p>
-<pre class="mermaid"><code>flowchart TD
+<pre class="mermaid"><code>flowchart LR
 corpus_pax--api---&gt;x
 corpus_base--copy---&gt;x
 op_stat(statutes in opinions)&lt;--after prerequisites--&gt;x
@@ -631,7 +631,8 @@ x(corpus-x)--&gt;db[(sqlite.db)]</code></pre>
 <p><img alt="Screenshot of LawData homepage" src="../img/screenshot-lawdata.png" title="Screenshot of Lawdata homepage" /></p>
 <p><a class="md-button" href="https://justmars.github.io/lawdata">Documentation</a></p>
 <h2 id="lawsql"><code>lawSQL</code></h2>
-<p>Hosting <em>lawData</em> content via third-party API calls, <em>lawSQL</em> is the public-facing site made with <a href="https://djangoproject.com">Django</a> and styled with <a href="https://tailwindcss.com">TailwindCSS</a>.</p>
+<p>While <em>lawData</em> content can be accessed via third-party API calls, it's interface isn't intended for public consumption.</p>
+<p>To make the UI more palatable, we need a more UI-driven site. Hence, <em>lawSQL</em> (built with <a href="https://djangoproject.com">Django</a>, styled with <a href="https://tailwindcss.com">TailwindCSS</a>).</p>
 <p><img alt="Screenshot of LawSQL homepage" src="../img/screenshot-lawsql-homepage.png" title="Screenshot of LawSQL homepage" /></p>
 <p><a class="md-button" href="https://lawsql.com">Website</a></p>
 
