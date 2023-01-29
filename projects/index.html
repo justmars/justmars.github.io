@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The public personal notes of Marcelino Veloso III on law and dev work">
+        <meta name="description" content="Public notes on law/dev work">
       
       
         <meta name="author" content="Marcelino Veloso III">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Projects - mv3</title>
+        <title>Projects - Marcelino Veloso III</title>
       
     
     
@@ -95,7 +95,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="mv3" class="md-header__button md-logo" aria-label="mv3" data-md-component="logo">
+    <a href=".." title="Marcelino Veloso III" class="md-header__button md-logo" aria-label="Marcelino Veloso III" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -108,7 +108,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            mv3
+            Marcelino Veloso III
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -264,13 +264,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="mv3" class="md-nav__button md-logo" aria-label="mv3" data-md-component="logo">
+    <a href=".." title="Marcelino Veloso III" class="md-nav__button md-logo" aria-label="Marcelino Veloso III" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    mv3
+    Marcelino Veloso III
   </label>
   
     <div class="md-nav__source">
@@ -365,6 +365,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#corpus-x" class="md-nav__link">
+    corpus-x
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lawdata" class="md-nav__link">
     lawData
   </a>
@@ -446,6 +453,13 @@
         <li class="md-nav__item">
   <a href="#sqlpyd" class="md-nav__link">
     sqlpyd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corpus-x" class="md-nav__link">
+    corpus-x
   </a>
   
 </li>
@@ -587,8 +601,8 @@
 </code></pre></div>
 <p><a class="md-button" href="https://justmars.github.io/statute-trees">Documentation</a></p>
 <h2 id="sqlpyd"><code>sqlpyd</code></h2>
-<p>Use <a href="https://sqlite-utils.datasette.io/">sqlite-utils</a> attributes in <a href="https://docs.pydantic.dev/">pydantic</a> models
-that are created with content from <a href="https://justmars.github.io/citation-utils">citation-utils</a> and <a href="https://justmars.github.io/statute-trees">statute-trees</a>:</p>
+<p>Use <a href="https://sqlite-utils.datasette.io/">sqlite-utils</a> attributes in <a href="https://docs.pydantic.dev/">pydantic</a> models.
+The models are the schema for content outputted from <a href="https://justmars.github.io/citation-utils">citation-utils</a> and <a href="https://justmars.github.io/statute-trees">statute-trees</a>:</p>
 <div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># TableConfig is a wrapper around `pydantic.BaseModel`</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># `col`, `fts`, and `index` attributes utilize sqlite-utils functions</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">class</span> <span class="nc">RegularName</span><span class="p">(</span><span class="n">TableConfig</span><span class="p">):</span>
@@ -601,8 +615,19 @@ that are created with content from <a href="https://justmars.github.io/citation-
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="n">use_enum_values</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div>
 <p><a class="md-button" href="https://justmars.github.io/sqlpyd">Documentation</a></p>
+<h2 id="corpus-x"><code>corpus-x</code></h2>
+<p><a href="https://github.com/justmars/corpus-x">corpus-x</a>, made with <em>sqlpyd</em> models, generates a <a href="https://sqlite.org">sqlite</a> database of Philippine legal content:</p>
+<pre class="mermaid"><code>flowchart TD
+corpus_pax--api---&gt;x
+corpus_base--copy---&gt;x
+op_stat(statutes in opinions)&lt;--after prerequisites--&gt;x
+op_cite(citations in opinions)&lt;--after prerequisites--&gt;x
+statutes--create trees--&gt;x
+codifications--create trees--&gt;x
+x(corpus-x)--&gt;db[(sqlite.db)]</code></pre>
+<p><a class="md-button" href="https://justmars.github.io/corpus-x">Documentation</a></p>
 <h2 id="lawdata"><code>lawData</code></h2>
-<p><em>citation-utils</em> and <em>statute-trees</em> are principal ingredients of <a href="https://github.com/justmars/corpus-x">corpus-x</a>. The latter creates an <a href="https://sqlite.org">sqlite</a> database, based on Philippine legal content, making it susceptible of being queried via <em>lawData</em>, a <a href="https://datasette.io">Datasette</a> instance:</p>
+<p><em>corpus-x</em> can be queried via <em>lawData</em>, a <a href="https://datasette.io">Datasette</a> instance:</p>
 <p><img alt="Screenshot of LawData homepage" src="../img/screenshot-lawdata.png" title="Screenshot of Lawdata homepage" /></p>
 <p><a class="md-button" href="https://justmars.github.io/lawdata">Documentation</a></p>
 <h2 id="lawsql"><code>lawSQL</code></h2>
