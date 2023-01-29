@@ -144,7 +144,7 @@ class RegularName(TableConfig):
 [corpus-x](https://github.com/justmars/corpus-x), made with _sqlpyd_ models, generates a [sqlite](https://sqlite.org) database of Philippine legal content:
 
 ```mermaid
-flowchart TD
+flowchart LR
 corpus_pax--api--->x
 corpus_base--copy--->x
 op_stat(statutes in opinions)<--after prerequisites-->x
@@ -166,7 +166,9 @@ _corpus-x_ can be queried via _lawData_, a [Datasette](https://datasette.io) ins
 
 ## `lawSQL`
 
-Hosting _lawData_ content via third-party API calls, _lawSQL_ is the public-facing site made with [Django](https://djangoproject.com) and styled with [TailwindCSS](https://tailwindcss.com).
+While _lawData_ content can be accessed via third-party API calls, it's interface isn't intended for public consumption.
+
+To make the UI more palatable, we need a more UI-driven site. Hence, _lawSQL_ (built with [Django](https://djangoproject.com), styled with [TailwindCSS](https://tailwindcss.com)).
 
 ![Screenshot of LawSQL homepage](img/screenshot-lawsql-homepage.png "Screenshot of LawSQL homepage")
 
