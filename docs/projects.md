@@ -4,8 +4,6 @@ hide:
 ---
 # Projects
 
-[Documentation](https://justmars.github.io/sqlpyd){ .md-button }
-
 ## `citation-utils`
 
 Extract citations of Philippine Supreme Court decisions from text.
@@ -123,7 +121,8 @@ StatuteDetails(
 
 ## `sqlpyd`
 
-Use [sqlite-utils](https://sqlite-utils.datasette.io/) attributes in [pydantic](https://docs.pydantic.dev/) models:
+Use [sqlite-utils](https://sqlite-utils.datasette.io/) attributes in [pydantic](https://docs.pydantic.dev/) models
+that are created with content from [citation-utils](https://justmars.github.io/citation-utils) and [statute-trees](https://justmars.github.io/statute-trees):
 
 ```py
 # TableConfig is a wrapper around `pydantic.BaseModel`
@@ -137,6 +136,8 @@ class RegularName(TableConfig):
     class Config:
         use_enum_values = True
 ```
+
+[Documentation](https://justmars.github.io/sqlpyd){ .md-button }
 
 ## `lawData`
 
