@@ -24,9 +24,7 @@ theme:
         name: Switch to light mode
 nav:
   - index.md
-  - projects.md
   - about.md
-
 extra:
   social:
     - icon: fontawesome/brands/github
