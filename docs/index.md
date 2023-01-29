@@ -12,6 +12,16 @@ I started to code again in 2019ish, sometime after law school. This is an attemp
 
 I've documented some of the work done this last year into a format that hopefully can be understood by the general public.
 
+## `corpus-unpdf`
+
+Extract SC-issued decision PDFs into contextualized lines:
+
+Spotting the footnote area using a green box| Convert image as preparatory step in page analysis
+--:|:--
+![A page of a Supreme Court decision formatted in PDF](img/sample_boxes.png "A page of a Supreme Court decision formatted in PDF") | ![A page of a Supreme Court decision after running opencv commands to dilate the image](img/sample_dilated.png "Post-processed page to understand page contours.")
+
+[Documentation](https://justmars.github.io/corpus-unpdf){ .md-button }
+
 ## `citation-utils`
 
 Extract citations of Philippine Supreme Court decisions from text.
