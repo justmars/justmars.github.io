@@ -151,6 +151,6 @@ _citation-utils_ and _statute-trees_ are principal ingredients of [corpus-x](htt
 
 Hosting _lawData_ content via third-party API calls, _lawSQL_ is the public-facing site made with [Django](https://djangoproject.com) and styled with [TailwindCSS](https://tailwindcss.com).
 
-![Screenshot of LawSQL homepage](img/screenshot-lawsql.png "Screenshot of LawSQL homepage")
+![Screenshot of LawSQL homepage](img/screenshot-lawsql-homepage.png "Screenshot of LawSQL homepage")
 
 [Website](https://lawsql.com){ .md-button }
