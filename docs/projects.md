@@ -4,23 +4,6 @@ hide:
 ---
 # Projects
 
-## `sqlpyd`
-
-Use [sqlite-utils](https://sqlite-utils.datasette.io/) attributes in [pydantic](https://docs.pydantic.dev/) models:
-
-```py
-# TableConfig is a wrapper around `pydantic.BaseModel`
-# `col`, `fts`, and `index` attributes utilize sqlite-utils functions
-class RegularName(TableConfig):
-    full_name: str | None = Field(None, col=str, fts=True, index=True)
-    first_name: str = Field(..., max_length=50, col=str, fts=True)
-    last_name: str = Field(..., max_length=50, col=str, fts=True, index=True)
-    suffix: Suffix | None = Field(None, max_length=4, col=str)
-
-    class Config:
-        use_enum_values = True
-```
-
 [Documentation](https://justmars.github.io/sqlpyd){ .md-button }
 
 ## `citation-utils`
@@ -137,6 +120,23 @@ StatuteDetails(
 ```
 
 [Documentation](https://justmars.github.io/statute-trees){ .md-button }
+
+## `sqlpyd`
+
+Use [sqlite-utils](https://sqlite-utils.datasette.io/) attributes in [pydantic](https://docs.pydantic.dev/) models:
+
+```py
+# TableConfig is a wrapper around `pydantic.BaseModel`
+# `col`, `fts`, and `index` attributes utilize sqlite-utils functions
+class RegularName(TableConfig):
+    full_name: str | None = Field(None, col=str, fts=True, index=True)
+    first_name: str = Field(..., max_length=50, col=str, fts=True)
+    last_name: str = Field(..., max_length=50, col=str, fts=True, index=True)
+    suffix: Suffix | None = Field(None, max_length=4, col=str)
+
+    class Config:
+        use_enum_values = True
+```
 
 ## `lawData`
 
