@@ -121,8 +121,8 @@ StatuteDetails(
 
 ## `sqlpyd`
 
-Use [sqlite-utils](https://sqlite-utils.datasette.io/) attributes in [pydantic](https://docs.pydantic.dev/) models
-that are created with content from [citation-utils](https://justmars.github.io/citation-utils) and [statute-trees](https://justmars.github.io/statute-trees):
+Use [sqlite-utils](https://sqlite-utils.datasette.io/) attributes in [pydantic](https://docs.pydantic.dev/) models.
+The models are the schema for content outputted from [citation-utils](https://justmars.github.io/citation-utils) and [statute-trees](https://justmars.github.io/statute-trees):
 
 ```py
 # TableConfig is a wrapper around `pydantic.BaseModel`
@@ -139,9 +139,26 @@ class RegularName(TableConfig):
 
 [Documentation](https://justmars.github.io/sqlpyd){ .md-button }
 
+## `corpus-x`
+
+[corpus-x](https://github.com/justmars/corpus-x), made with _sqlpyd_ models, generates a [sqlite](https://sqlite.org) database of Philippine legal content:
+
+```mermaid
+flowchart TD
+corpus_pax--api--->x
+corpus_base--copy--->x
+op_stat(statutes in opinions)<--after prerequisites-->x
+op_cite(citations in opinions)<--after prerequisites-->x
+statutes--create trees-->x
+codifications--create trees-->x
+x(corpus-x)-->db[(sqlite.db)]
+```
+
+[Documentation](https://justmars.github.io/corpus-x){ .md-button }
+
 ## `lawData`
 
-_citation-utils_ and _statute-trees_ are principal ingredients of [corpus-x](https://github.com/justmars/corpus-x). The latter creates an [sqlite](https://sqlite.org) database, based on Philippine legal content, making it susceptible of being queried via _lawData_, a [Datasette](https://datasette.io) instance:
+_corpus-x_ can be queried via _lawData_, a [Datasette](https://datasette.io) instance:
 
 ![Screenshot of LawData homepage](img/screenshot-lawdata.png "Screenshot of Lawdata homepage")
 
