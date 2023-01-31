@@ -2,7 +2,7 @@ site_name: Marcelino Veloso III
 site_description: Public notes on law/dev work
 site_url: https://justmars.github.io
 site_author: Marcelino Veloso III
-repo_url: https://github.com/justmars/justmars.github.io
+repo_url: https://github.com/justmars
 theme:
   name: "material"
   custom_dir: overrides
