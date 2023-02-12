@@ -12,6 +12,27 @@ I started to code again in 2019ish, sometime after law school. This is an attemp
 
 I've documented some of the work done this last year into a format that hopefully can be understood by the general public.
 
+## `pylts`
+
+Use litestream sqlite to s3 (and back) inside a python script:
+
+```mermaid
+flowchart LR
+  subgraph fly.io
+    volume
+    app
+  end
+  subgraph aws
+    s3(s3 bucket)--pylts restore volume-->app
+  end
+  subgraph local
+    db--"litestream replicate (args)"-->s3
+    code--fly deploy-->app
+  end
+```
+
+[Documentation](https://mv3.dev/pylts){ .md-button }
+
 ## `corpus-unpdf`
 
 Extract SC-issued decision PDFs into contextualized lines:
@@ -20,7 +41,7 @@ Spotting the footnote area using a green box| Convert image as preparatory step 
 --:|:--
 ![A page of a Supreme Court decision formatted in PDF](img/sample_boxes.png "A page of a Supreme Court decision formatted in PDF") | ![A page of a Supreme Court decision after running opencv commands to dilate the image](img/sample_dilated.png "Post-processed page to understand page contours.")
 
-[Documentation](https://justmars.github.io/corpus-unpdf){ .md-button }
+[Documentation](https://mv3.dev/corpus-unpdf){ .md-button }
 
 ## `citation-utils`
 
@@ -43,7 +64,7 @@ Extract citations of Philippine Supreme Court decisions from text.
 ]
 ```
 
-[Documentation](https://justmars.github.io/citation-utils){ .md-button }
+[Documentation](https://mv3.dev/citation-utils){ .md-button }
 
 ## `statute-trees`
 
@@ -135,12 +156,12 @@ StatuteDetails(
 )
 ```
 
-[Documentation](https://justmars.github.io/statute-trees){ .md-button }
+[Documentation](https://mv3.dev/statute-trees){ .md-button }
 
 ## `sqlpyd`
 
 Use [sqlite-utils](https://sqlite-utils.datasette.io/) attributes in [pydantic](https://docs.pydantic.dev/) models.
-The models are the schema for content outputted from [citation-utils](https://justmars.github.io/citation-utils) and [statute-trees](https://justmars.github.io/statute-trees):
+The models are the schema for content outputted from [citation-utils](https://mv3.dev/citation-utils) and [statute-trees](https://mv3.dev/statute-trees):
 
 ```py
 # TableConfig is a wrapper around `pydantic.BaseModel`
@@ -155,7 +176,7 @@ class RegularName(TableConfig):
         use_enum_values = True
 ```
 
-[Documentation](https://justmars.github.io/sqlpyd){ .md-button }
+[Documentation](https://mv3.dev/sqlpyd){ .md-button }
 
 ## `corpus-x`
 
@@ -172,7 +193,7 @@ codifications--create trees-->x
 x(corpus-x)-->db[(sqlite.db)]
 ```
 
-[Documentation](https://justmars.github.io/corpus-x){ .md-button }
+[Documentation](https://mv3.dev/corpus-x){ .md-button }
 
 ## `lawData`
 
@@ -180,7 +201,7 @@ _corpus-x_ can be queried via _lawData_, a [Datasette](https://datasette.io) ins
 
 ![Screenshot of LawData homepage](img/screenshot-lawdata.png "Screenshot of Lawdata homepage")
 
-[Documentation](https://justmars.github.io/lawdata){ .md-button }
+[Documentation](https://mv3.dev/lawdata){ .md-button }
 
 ## `lawSQL`
 
