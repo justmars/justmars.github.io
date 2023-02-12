@@ -19,7 +19,7 @@
         <link rel="next" href="about/">
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
@@ -317,6 +317,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pylts" class="md-nav__link">
+    pylts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#corpus-unpdf" class="md-nav__link">
     corpus-unpdf
   </a>
@@ -417,6 +424,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pylts" class="md-nav__link">
+    pylts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#corpus-unpdf" class="md-nav__link">
     corpus-unpdf
   </a>
@@ -489,6 +503,21 @@
 <p>The last time I tried a personal blog was the dawn of the internet. Google was a startup, Geocities was still alive, and Dreamweaver was a thing.</p>
 <p>I started to code again in 2019ish, sometime after law school. This is an attempt to record notes and things I've learned, in the futile hope that I don't forget them.</p>
 <p>I've documented some of the work done this last year into a format that hopefully can be understood by the general public.</p>
+<h2 id="pylts"><code>pylts</code></h2>
+<p>Use litestream sqlite to s3 (and back) inside a python script:</p>
+<pre class="mermaid"><code>flowchart LR
+  subgraph fly.io
+    volume
+    app
+  end
+  subgraph aws
+    s3(s3 bucket)--pylts restore volume--&gt;app
+  end
+  subgraph local
+    db--"litestream replicate (args)"--&gt;s3
+    code--fly deploy--&gt;app
+  end</code></pre>
+<p><a class="md-button" href="https://mv3.dev/pylts">Documentation</a></p>
 <h2 id="corpus-unpdf"><code>corpus-unpdf</code></h2>
 <p>Extract SC-issued decision PDFs into contextualized lines:</p>
 <table>
@@ -505,7 +534,7 @@
 </tr>
 </tbody>
 </table>
-<p><a class="md-button" href="https://justmars.github.io/corpus-unpdf">Documentation</a></p>
+<p><a class="md-button" href="https://mv3.dev/corpus-unpdf">Documentation</a></p>
 <h2 id="citation-utils"><code>citation-utils</code></h2>
 <p>Extract citations of Philippine Supreme Court decisions from text.</p>
 <div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;em&gt;Gatchalian Promotions Talent Pool, Inc. v. Atty. Naldoza&lt;/em&gt;,</span>
@@ -523,7 +552,7 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">{</span><span class="s1">&#39;phil&#39;</span><span class="p">:</span> <span class="s1">&#39;374 Phil 1&#39;</span><span class="p">}</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">]</span>
 </code></pre></div>
-<p><a class="md-button" href="https://justmars.github.io/citation-utils">Documentation</a></p>
+<p><a class="md-button" href="https://mv3.dev/citation-utils">Documentation</a></p>
 <h2 id="statute-trees"><code>statute-trees</code></h2>
 <p>Detect titles of Philippine statutes when found in text.</p>
 <div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># imagine messy legalese with citations</span>
@@ -607,10 +636,10 @@
 <a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>    <span class="p">]</span>
 <a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a><span class="p">)</span>
 </code></pre></div>
-<p><a class="md-button" href="https://justmars.github.io/statute-trees">Documentation</a></p>
+<p><a class="md-button" href="https://mv3.dev/statute-trees">Documentation</a></p>
 <h2 id="sqlpyd"><code>sqlpyd</code></h2>
 <p>Use <a href="https://sqlite-utils.datasette.io/">sqlite-utils</a> attributes in <a href="https://docs.pydantic.dev/">pydantic</a> models.
-The models are the schema for content outputted from <a href="https://justmars.github.io/citation-utils">citation-utils</a> and <a href="https://justmars.github.io/statute-trees">statute-trees</a>:</p>
+The models are the schema for content outputted from <a href="https://mv3.dev/citation-utils">citation-utils</a> and <a href="https://mv3.dev/statute-trees">statute-trees</a>:</p>
 <div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># TableConfig is a wrapper around `pydantic.BaseModel`</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># `col`, `fts`, and `index` attributes utilize sqlite-utils functions</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">class</span> <span class="nc">RegularName</span><span class="p">(</span><span class="n">TableConfig</span><span class="p">):</span>
@@ -622,7 +651,7 @@ The models are the schema for content outputted from <a href="https://justmars.g
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="n">use_enum_values</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div>
-<p><a class="md-button" href="https://justmars.github.io/sqlpyd">Documentation</a></p>
+<p><a class="md-button" href="https://mv3.dev/sqlpyd">Documentation</a></p>
 <h2 id="corpus-x"><code>corpus-x</code></h2>
 <p><a href="https://github.com/justmars/corpus-x">corpus-x</a>, made with <em>sqlpyd</em> models, generates a <a href="https://sqlite.org">sqlite</a> database of Philippine legal content:</p>
 <pre class="mermaid"><code>flowchart LR
@@ -633,11 +662,11 @@ op_cite(citations in opinions)&lt;--after prerequisites--&gt;x
 statutes--create trees--&gt;x
 codifications--create trees--&gt;x
 x(corpus-x)--&gt;db[(sqlite.db)]</code></pre>
-<p><a class="md-button" href="https://justmars.github.io/corpus-x">Documentation</a></p>
+<p><a class="md-button" href="https://mv3.dev/corpus-x">Documentation</a></p>
 <h2 id="lawdata"><code>lawData</code></h2>
 <p><em>corpus-x</em> can be queried via <em>lawData</em>, a <a href="https://datasette.io">Datasette</a> instance:</p>
 <p><img alt="Screenshot of LawData homepage" src="img/screenshot-lawdata.png" title="Screenshot of Lawdata homepage" /></p>
-<p><a class="md-button" href="https://justmars.github.io/lawdata">Documentation</a></p>
+<p><a class="md-button" href="https://mv3.dev/lawdata">Documentation</a></p>
 <h2 id="lawsql"><code>lawSQL</code></h2>
 <p>While <em>lawData</em> content can be accessed via third-party API calls, it's interface isn't intended for public consumption.</p>
 <p>To make the UI more palatable, we need a more UI-driven site. Hence, <em>lawSQL</em> (built with <a href="https://djangoproject.com">Django</a>, styled with <a href="https://tailwindcss.com">TailwindCSS</a>).</p>
@@ -681,13 +710,19 @@ x(corpus-x)--&gt;db[(sqlite.db)]</code></pre>
   
     
     
+    
+    
     <a href="https://github.com/justmars" target="_blank" rel="noopener" title="justmars on Github" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
     
-    <a href="https://esq.social/@mv" target="_blank" rel="noopener" title="mv on Mastodon" class="md-social__link">
+      
+    
+    
+    
+    <a href="https://esq.social/@mv" target="_blank" rel="noopener me" title="mv on Mastodon" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
     </a>
   
@@ -705,7 +740,7 @@ x(corpus-x)--&gt;db[(sqlite.db)]</code></pre>
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="assets/javascripts/bundle.4b2c34cd.min.js"></script>
       
     
   </body>
