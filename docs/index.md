@@ -14,7 +14,7 @@ I've documented some of the work done this last year into a format that hopefull
 
 ## `pylts`
 
-Use litestream sqlite to s3 (and back) inside a python script:
+Use [litestream](https://litestream.io/) for restored/replicated sqlite databases from `s3` inside a python script:
 
 ```mermaid
 flowchart LR
