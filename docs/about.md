@@ -16,14 +16,14 @@ Database | sqlite, postgresql
 Data | Datasette, pydantic, sqlite-utils
 Templating | DTL, Jinja
 Docs | mkdocs, mkdocstrings, mkdocs-material
-DevOps CLI | flyctl, litestream
+DevOps CLI | flyctl, litestream, cloudflare, aws
 
 ## Tech-Related Work
 
 Work  | Organization | Description
 --:|:--|:--
-`CEO` | Apptitude Info Tech Solutions, Inc. | Know-your-learner-based learning management system with certificates issued on private blockchain node
-`CEO` | Choose Coffee or Code, Inc. | Bespoke digital solutions including inventory management, booking systems, etc.
+`CEO` / `dev` | Apptitude Info Tech Solutions, Inc. | Know-your-learner-based learning management system with certificates issued on private blockchain node
+`CEO` / `dev` | Choose Coffee or Code, Inc. | Bespoke digital solutions including inventory management, booking systems, etc.
 
 ## Law-Based Publications
 
