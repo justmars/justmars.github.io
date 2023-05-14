@@ -8,7 +8,6 @@ license = "MIT"
 homepage = "https://justmars.github.io"
 repository = "https://github.com/justmars/justmars"
 
-
 [tool.poetry.dependencies]
 python = "^3.11"
 python-dotenv = "^0.21"
@@ -17,25 +16,7 @@ python-dotenv = "^0.21"
 pre-commit = "^2.21"
 mkdocs = "^1.4.2"
 mkdocstrings = { extras = ["python"], version = "^0.20.0" }
-mkdocs-material = "^9.0.15"
-
-[tool.black]
-target-version = ['py311']
-line-length = 79
-include = '.pyi?$'
-exclude = '''
-/(
-    .git
-    | .hg
-    | .mypy_cache
-    | .tox
-    | .venv
-    | _build
-    | buck-out
-    | build
-    | dist
-)/
-'''
+mkdocs-material = "^9.1"
 
 [build-system]
 requires = ["poetry-core>=1.3.2"]

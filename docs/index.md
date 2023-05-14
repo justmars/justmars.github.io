@@ -10,7 +10,25 @@ The last time I tried a personal blog was the dawn of the internet. Google was a
 
 I started to code again in 2019ish, sometime after law school. This is an attempt to record notes and things I've learned, in the futile hope that I don't forget them.
 
-I've documented some of the work done this last year into a format that hopefully can be understood by the general public.
+I've documented recent work into a format that hopefully can be understood by the general public. Maybe eventually I'll create a dedicated static site. Until then, this seems like a good place as any.
+
+## `start-django`
+
+A starter boilerplate plate for Django using TailwindCSS and htmx.
+
+[Documentation](https://mv3.dev/start-django){ .md-button } [Website](https://start-django.fly.dev){ .md-button }
+
+## `django-fragments`
+
+Custom template tags for common html idioms in Django.
+
+[Documentation](https://mv3.dev/django-fragments){ .md-button }
+
+## `cloudflare-images`
+
+A python-based API on the [Cloudflare Images](https://developers.cloudflare.com/images/cloudflare-images/) with an implementation as a custom storage class for Django.
+
+[Documentation](https://mv3.dev/cloudflare-images){ .md-button }
 
 ## `pylts`
 
