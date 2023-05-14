@@ -14,13 +14,13 @@ I've documented recent work into a format that hopefully can be understood by th
 
 ## `start-django`
 
-A starter boilerplate plate for Django using TailwindCSS and htmx.
+A starter boilerplate plate for :simple-django: using TailwindCSS and htmx.
 
 [Documentation](https://mv3.dev/start-django){ .md-button } [Website](https://start-django.fly.dev){ .md-button }
 
 ## `django-fragments`
 
-Custom template tags for common html idioms in Django.
+Custom template tags for common :simple-django:-html idioms.
 
 [Documentation](https://mv3.dev/django-fragments){ .md-button }
 
