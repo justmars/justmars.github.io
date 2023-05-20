@@ -4,13 +4,7 @@ hide:
 ---
 # Home
 
-Hi, I'm Mars and this is an attempt at a blog.
-
-The last time I tried a personal blog was the dawn of the internet. Google was a startup, Geocities was still alive, and Dreamweaver was a thing.
-
-I started to code again in 2019ish, sometime after law school. This is an attempt to record notes and things I've learned, in the futile hope that I don't forget them.
-
-I've documented recent work into a format that hopefully can be understood by the general public. Maybe eventually I'll create a dedicated static site. Until then, this seems like a good place as any.
+I've documented recent work here but feel free to check out the [blog](https://mv3.dev).
 
 ## `start-django`
 
